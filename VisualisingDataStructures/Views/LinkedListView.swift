@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LinkedListView: View {
     @State private var linkedList = LinkedList()
-    @State private var stuffForDisplaying: String = ""
+    @State private var stuffForDisplaying = ""
     @State private var removedItem: String = ""
     
     var body: some View {
@@ -17,14 +17,14 @@ struct LinkedListView: View {
             Text("The linked list is: \(stuffForDisplaying)")
             Form {
                 Button("ADD", action: { linkedList.add(); displayTheList() })
-                Button("REMOVE", action: { getRemove(); displayTheList() })
+                Button("REMOVE RANDOM ITEM", action: { getRemove(); displayTheList() })
             }
         }
 
     }
     
     func displayTheList() {
-        
+        stuffForDisplaying = linkedList.displayList()
     }
     
     func getRemove() {

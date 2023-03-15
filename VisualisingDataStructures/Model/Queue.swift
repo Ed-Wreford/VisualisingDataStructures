@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Queue {
+class Queue: ObservableObject {
     
     var items: [Int] = []
     
