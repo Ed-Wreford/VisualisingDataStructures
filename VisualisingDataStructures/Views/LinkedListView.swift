@@ -10,14 +10,13 @@ import SwiftUI
 struct LinkedListView: View {
     @State private var linkedList = LinkedList()
     @State private var stuffForDisplaying = ""
-    @State private var removedItem: String = ""
     
     var body: some View {
         VStack {
             Text("The linked list is: \(stuffForDisplaying)")
             Form {
                 Button("ADD", action: { linkedList.add(); displayTheList() })
-                Button("REMOVE RANDOM ITEM", action: { getRemove(); displayTheList() })
+                Button("REMOVE RANDOM ITEM", action: { linkedList.remove(); displayTheList() })
             }
         }
 
@@ -27,9 +26,6 @@ struct LinkedListView: View {
         stuffForDisplaying = linkedList.displayList()
     }
     
-    func getRemove() {
-        
-    }
 }
 
 struct LinkedListView_Previews: PreviewProvider {
