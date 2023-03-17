@@ -8,9 +8,11 @@
 import XCTest
 @testable import VisualisingDataStructures
 
-final class VisualisingDataStructuresTests: XCTestCase {
+class VisualisingDataStructuresTests: XCTestCase {
 
-    func testThatCorrectItemIsPushed() {
+    func testThatCorrectItemIsPushedStack() {
+        let testCase = ""
+        
         let expected = ""
         let actual = ""
         
@@ -18,14 +20,16 @@ final class VisualisingDataStructuresTests: XCTestCase {
         
     }
     
-    func testThatCorrectItemIsPopped() {
-        let expected = ""
-        let actual = ""
+    func testThatCorrectItemIsPoppedStack() {
+    
+        let expected = 0
+        let actual = Stack().pop()
         
         XCTAssertEqual(actual, expected)
     }
     
-    func testThatCorrectItemIsPeeked() {
+    func testThatCorrectItemIsPeekedStack() {
+        
         let expected = ""
         let actual = ""
         

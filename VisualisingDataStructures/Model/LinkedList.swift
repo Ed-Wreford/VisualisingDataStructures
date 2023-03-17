@@ -27,17 +27,19 @@ struct LinkedList {
     }
     
     mutating func remove() {
-        let randomChoice = Int.random(in: 0...theList.count - 1)
-        if randomChoice != 0 {
-            let previousHead: Int = theList[randomChoice - 1].head
-            let previousData: Int = theList[randomChoice - 1].data
-            let newPointer = theList[randomChoice].pointer
-            // changes previous item
-            theList[randomChoice - 1] = (Node(head: previousHead,pointer: newPointer, data: previousData))
-            // deletes choosen node
-            theList.remove(at: randomChoice)
-        } else {
-            theList.remove(at: randomChoice)
+        if theList.count != 0 {
+            let randomChoice = Int.random(in: 0...theList.count - 1)
+            if randomChoice != 0 {
+                let previousHead: Int = theList[randomChoice - 1].head
+                let previousData: Int = theList[randomChoice - 1].data
+                let newPointer = theList[randomChoice].pointer
+                // changes previous item
+                theList[randomChoice - 1] = (Node(head: previousHead,pointer: newPointer, data: previousData))
+                // deletes choosen node
+                theList.remove(at: randomChoice)
+            } else {
+                theList.remove(at: randomChoice)
+            }
         }
     }
     
@@ -47,7 +49,7 @@ struct LinkedList {
             return forDisplaying
         } else {
             for index in 0...(theList.count - 1) {
-                let formattedNode = "\(theList[index].head) | \(theList[index].data) | \(String(describing: theList[index].pointer))"
+                let formattedNode = "head: \(theList[index].head) | \(theList[index].data) | pointer: \(String(describing: theList[index].pointer))"
                 if forDisplaying == "" {
                     forDisplaying = "\(formattedNode)"
                 } else {

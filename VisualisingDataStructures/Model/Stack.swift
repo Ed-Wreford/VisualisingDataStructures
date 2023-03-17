@@ -15,6 +15,7 @@ class Stack: ObservableObject {
     func push() {
         let randomNum = Int.random(in: 1...1000)
         self.items.insert(randomNum, at: items.count)
+        
     }
     
     func pop() -> Int? {

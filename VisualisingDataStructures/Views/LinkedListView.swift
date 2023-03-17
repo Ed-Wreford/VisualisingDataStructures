@@ -13,7 +13,7 @@ struct LinkedListView: View {
     
     var body: some View {
         VStack {
-            Text("The linked list is: \(stuffForDisplaying)")
+            Text("\(stuffForDisplaying)")
             Form {
                 Button("ADD", action: { linkedList.add(); displayTheList() })
                 Button("REMOVE RANDOM ITEM", action: { linkedList.remove(); displayTheList() })
