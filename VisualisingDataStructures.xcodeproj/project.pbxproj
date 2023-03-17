@@ -19,8 +19,9 @@
 		F63CA58E29C1053200D4A5E7 /* LinkedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63CA58D29C1053200D4A5E7 /* LinkedListView.swift */; };
 		F63CA59029C1054900D4A5E7 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63CA58F29C1054900D4A5E7 /* Stack.swift */; };
 		F63CA59229C11D8E00D4A5E7 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63CA59129C11D8E00D4A5E7 /* Queue.swift */; };
-		F63CA59629C1235800D4A5E7 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63CA59529C1235800D4A5E7 /* Node.swift */; };
 		F66884BB29C279E000C99C47 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66884BA29C279E000C99C47 /* LinkedList.swift */; };
+		F6B5335C29C5132000291039 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B5335B29C5132000291039 /* Tree.swift */; };
+		F6B5335E29C51BD800291039 /* TreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B5335D29C51BD800291039 /* TreeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +57,9 @@
 		F63CA58D29C1053200D4A5E7 /* LinkedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListView.swift; sourceTree = "<group>"; };
 		F63CA58F29C1054900D4A5E7 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		F63CA59129C11D8E00D4A5E7 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
-		F63CA59529C1235800D4A5E7 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		F66884BA29C279E000C99C47 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
+		F6B5335B29C5132000291039 /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
+		F6B5335D29C51BD800291039 /* TreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				F63CA55F29C1046B00D4A5E7 /* StackView.swift */,
 				F63CA58B29C1052100D4A5E7 /* QueueView.swift */,
 				F63CA58D29C1053200D4A5E7 /* LinkedListView.swift */,
+				F6B5335D29C51BD800291039 /* TreeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -158,8 +161,8 @@
 			children = (
 				F63CA58F29C1054900D4A5E7 /* Stack.swift */,
 				F63CA59129C11D8E00D4A5E7 /* Queue.swift */,
-				F63CA59529C1235800D4A5E7 /* Node.swift */,
 				F66884BA29C279E000C99C47 /* LinkedList.swift */,
+				F6B5335B29C5132000291039 /* Tree.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -294,13 +297,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6B5335E29C51BD800291039 /* TreeView.swift in Sources */,
 				F66884BB29C279E000C99C47 /* LinkedList.swift in Sources */,
-				F63CA59629C1235800D4A5E7 /* Node.swift in Sources */,
 				F63CA56029C1046B00D4A5E7 /* StackView.swift in Sources */,
 				F63CA59229C11D8E00D4A5E7 /* Queue.swift in Sources */,
 				F63CA55E29C1046B00D4A5E7 /* VisualisingDataStructuresApp.swift in Sources */,
 				F63CA58C29C1052100D4A5E7 /* QueueView.swift in Sources */,
 				F63CA58A29C1050800D4A5E7 /* ContentView.swift in Sources */,
+				F6B5335C29C5132000291039 /* Tree.swift in Sources */,
 				F63CA59029C1054900D4A5E7 /* Stack.swift in Sources */,
 				F63CA58E29C1053200D4A5E7 /* LinkedListView.swift in Sources */,
 			);

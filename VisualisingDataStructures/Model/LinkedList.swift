@@ -7,6 +7,14 @@
 
 import Foundation
 
+struct Node {
+    
+    var head: Int
+    var pointer: Int?
+    var data: Int
+    
+}
+
 struct LinkedList {
     
     var theList: [Node] = []

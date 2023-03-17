@@ -13,6 +13,7 @@ struct ContentView: View {
             NavigationLink("Stack", destination: StackView())
             NavigationLink("Queue", destination: QueueView())
             NavigationLink("Linked List", destination: LinkedListView())
+            NavigationLink("Tree", destination: TreeView())
                 .navigationTitle("Home Page")
         }
     }
