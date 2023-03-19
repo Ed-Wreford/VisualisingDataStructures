@@ -19,19 +19,20 @@ struct LinkedList {
     
     var theList: [Node] = []
     
-    mutating func add() {
+    mutating func add(itemForAdding: Int) -> Int {
         if theList.isEmpty {
-            theList.append(Node(head: 0, pointer: nil, data: Int.random(in: 1...1000)))
+            theList.append(Node(head: 0, pointer: nil, data: itemForAdding))
         } else {
             let previousHead: Int = theList[theList.count - 1].head
             let newHead: Int = previousHead + 1
             let previousData: Int = theList[theList.count - 1].data
-            // adds new item to linked list
-            theList.insert(Node(head: newHead, pointer: nil, data: Int.random(in: 1...1000)), at: theList.count)
             // changes pointer of previous item
-            theList[theList.count - 2] = (Node(head: previousHead, pointer: newHead, data: previousData))
             
+            theList[theList.count - 2] = (Node(head: previousHead, pointer: newHead, data: previousData))
+            // adds new item to linked list
+            theList.insert(Node(head: newHead, pointer: nil, data: itemForAdding), at: theList.count)
         }
+        return theList[theList.count - 1].data
     }
     
     mutating func remove() {

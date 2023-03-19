@@ -11,12 +11,12 @@ class Queue: ObservableObject {
     
     var items: [Int] = []
     
-    func push() {
-        let randomNum = Int.random(in: 1...1000)
-        self.items.insert(randomNum, at: items.count)
+    func push(itemToBePushed: Int) -> Int {
+        self.items.insert(itemToBePushed, at: items.count)
+        return itemToBePushed
     }
     
-    func pop() -> Int? {
+    func pop(anArray: [Int]) -> Int? {
         if items.isEmpty {
             return nil
         } else {
@@ -24,7 +24,7 @@ class Queue: ObservableObject {
         }
     }
     
-    func display() -> String {
+    func display(anArray: [Int]) -> String {
         var forDisplaying = ""
         for item in items {
             let stringOfItem = String(item)

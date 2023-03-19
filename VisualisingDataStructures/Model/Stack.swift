@@ -12,21 +12,20 @@ class Stack: ObservableObject {
     var items: [Int] = []
 
     
-    func push() {
-        let randomNum = Int.random(in: 1...1000)
-        self.items.insert(randomNum, at: items.count)
-        
+    func push(itemToBePushed: Int) -> Int {
+        self.items.insert(itemToBePushed, at: items.count)
+        return itemToBePushed
     }
     
-    func pop() -> Int? {
+    func pop(anArray: [Int]) -> Int? {
         if items.isEmpty {
             return nil
         } else {
-            return self.items.removeLast()
+            return items.removeLast()
         }
     }
     
-    func peek() -> Int? {
+    func peek(anArray: [Int]) -> Int? {
         if self.items.count > 0 {
             return self.items[items.count-1]
         } else {
