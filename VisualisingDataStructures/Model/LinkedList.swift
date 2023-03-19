@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Node {
+struct Node: Equatable {
     
     var head: Int
     var pointer: Int?
@@ -27,38 +27,37 @@ struct LinkedList {
             let newHead: Int = previousHead + 1
             let previousData: Int = theList[theList.count - 1].data
             // changes pointer of previous item
-            
-            theList[theList.count - 2] = (Node(head: previousHead, pointer: newHead, data: previousData))
+            theList[theList.count - 1] = (Node(head: previousHead, pointer: newHead, data: previousData))
             // adds new item to linked list
             theList.insert(Node(head: newHead, pointer: nil, data: itemForAdding), at: theList.count)
         }
         return theList[theList.count - 1].data
     }
     
-    mutating func remove() {
+    mutating func remove(itemForRemoving: Int) -> [Node] {
         if theList.count != 0 {
-            let randomChoice = Int.random(in: 0...theList.count - 1)
-            if randomChoice != 0 {
-                let previousHead: Int = theList[randomChoice - 1].head
-                let previousData: Int = theList[randomChoice - 1].data
-                let newPointer = theList[randomChoice].pointer
+            if itemForRemoving != 0 {
+                let previousHead: Int = theList[itemForRemoving - 1].head
+                let previousData: Int = theList[itemForRemoving - 1].data
+                let newPointer = theList[itemForRemoving].pointer
                 // changes previous item
-                theList[randomChoice - 1] = (Node(head: previousHead,pointer: newPointer, data: previousData))
+                theList[itemForRemoving - 1] = (Node(head: previousHead,pointer: newPointer, data: previousData))
                 // deletes choosen node
-                theList.remove(at: randomChoice)
+                theList.remove(at: itemForRemoving)
             } else {
-                theList.remove(at: randomChoice)
+                theList.remove(at: itemForRemoving)
             }
         }
+        return theList
     }
     
-    func displayList() -> String {
+    mutating func displayList() -> String {
         var forDisplaying = ""
         if theList.isEmpty {
             return forDisplaying
         } else {
             for index in 0...(theList.count - 1) {
-                let formattedNode = "head: \(theList[index].head) | \(theList[index].data) | pointer: \(String(describing: theList[index].pointer))"
+                let formattedNode = "Head: \(theList[index].head) | \(theList[index].data) | Pointer: \(String(describing: theList[index].pointer))"
                 if forDisplaying == "" {
                     forDisplaying = "\(formattedNode)"
                 } else {

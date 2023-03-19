@@ -106,10 +106,28 @@ class VisualisingDataStructuresTests: XCTestCase {
     }
     
     func testThatCorrectItemIsRemovedFromLinkedList() throws {
+        var linkedList = LinkedList()
+        let testCases = [(itemToBeRemoved: 0, expected: [Node(head: 2, pointer: nil, data: 456)]), (itemToBeRemoved: 1, expected: [Node(head: 0, pointer: nil, data: 123)])]
         
+        for testCase in testCases {
+            linkedList.theList = [Node(head: 0, pointer: 2, data: 123), Node(head: 2, pointer: nil, data: 456)]
+            let actual = linkedList.remove(itemForRemoving: testCase.itemToBeRemoved)
+            
+            XCTAssertEqual(actual, testCase.expected)
+        }
     }
     
     func testThatCorrectItemIsDisplayedFromLinkedList() throws {
+        var linkedList = LinkedList()
+        let testCases = [(testArray: [123, 456], expected: "Head: 0 | 123 | Pointer: 1, Head: 1 | 456 | Pointer: nil"), (testArray: [987, 654], expected: "Head: 0 | 987 | Pointer: 1, Head: 1 | 654 | Pointer: nil")]
         
+        for testCase in testCases {
+            linkedList.add(itemForAdding: testCase.testArray[0])
+            linkedList.add(itemForAdding: testCase.testArray[1])
+            let actual = linkedList.displayList()
+            
+            XCTAssertEqual(actual, testCase.expected)
+            linkedList.theList = []
+        }
     }
 }
